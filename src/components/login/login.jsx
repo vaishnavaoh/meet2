@@ -27,7 +27,7 @@ ENDPOINT HERE"
         </div>
       </div>
       <a
-        href="https://vaishnavaoh.github.io/meet/privacy.html"
+        href="https://vaishnavaoh.github.io/meet2/privacy.html"
         rel="nofollow noopener"
       >
         Privacy policy
