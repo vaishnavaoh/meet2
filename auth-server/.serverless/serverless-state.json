@@ -7,7 +7,12 @@
     "provider": {
       "name": "aws",
       "runtime": "nodejs12.x",
-      "environment": {},
+      "environment": {
+        "CLIENT_ID": "864563415021-queh2eskbicnto0qtk3tnfu329fd17oj.apps.googleusercontent.com",
+        "CLIENT_SECRET": "xd7Dxz9ontNBjJMCTMk1CqY6",
+        "PROJECT_ID": "crucial-engine-196101",
+        "CALENDAR_ID": "pardhunamburi@gmail.com"
+      },
       "stage": "dev",
       "variableSyntax": "\\${([^{}:]+?(?:\\(|:)(?:[^:{}][^{}]*?)?)}",
       "region": "us-east-1",
@@ -175,7 +180,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1625521236071-2021-07-05T21:40:36.071Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1625695056346-2021-07-07T21:57:36.346Z/auth-server.zip"
               },
               "Handler": "handler.getAuthURL",
               "Runtime": "nodejs12.x",
@@ -183,7 +188,12 @@
               "MemorySize": 1024,
               "Timeout": 6,
               "Environment": {
-                "Variables": {}
+                "Variables": {
+                  "CLIENT_ID": "864563415021-queh2eskbicnto0qtk3tnfu329fd17oj.apps.googleusercontent.com",
+                  "CLIENT_SECRET": "xd7Dxz9ontNBjJMCTMk1CqY6",
+                  "PROJECT_ID": "crucial-engine-196101",
+                  "CALENDAR_ID": "pardhunamburi@gmail.com"
+                }
               },
               "Role": {
                 "Fn::GetAtt": [
@@ -196,14 +206,14 @@
               "GetAuthURLLogGroup"
             ]
           },
-          "GetAuthURLLambdaVersionM8i8i2UVDQYGBNJt3ssaobpsqeLHBKKHjE2ItAaR0": {
+          "GetAuthURLLambdaVersion8y5YPU4v8ILAnSQ82qgfdkeiOZEEgdZrz0J1JB9FE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAuthURLLambdaFunction"
               },
-              "CodeSha256": "lrdGW9vGiRjwbvCYoDOC/eYCUg+aowmQm49FK7MrvBY="
+              "CodeSha256": "IJFck9OzdVmj35AwAjSxB1HaTDRN3yVNNKQmfaYGe9g="
             }
           },
           "ApiGatewayRestApi": {
@@ -288,7 +298,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1625521229271": {
+          "ApiGatewayDeployment1625695048618": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -350,7 +360,7 @@
           "GetAuthURLLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAuthURLLambdaVersionM8i8i2UVDQYGBNJt3ssaobpsqeLHBKKHjE2ItAaR0"
+              "Ref": "GetAuthURLLambdaVersion8y5YPU4v8ILAnSQ82qgfdkeiOZEEgdZrz0J1JB9FE"
             },
             "Export": {
               "Name": "sls-auth-server-dev-GetAuthURLLambdaFunctionQualifiedArn"
@@ -487,7 +497,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetAuthURLLambdaVersionM8i8i2UVDQYGBNJt3ssaobpsqeLHBKKHjE2ItAaR0"
+        "versionLogicalId": "GetAuthURLLambdaVersion8y5YPU4v8ILAnSQ82qgfdkeiOZEEgdZrz0J1JB9FE"
       }
     },
     "configValidationMode": "warn",
@@ -530,7 +540,7 @@
     "artifact": "/Users/pardhunamburi/Documents/GitHub/meet2/auth-server/.serverless/auth-server.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/auth-server/dev/1625521236071-2021-07-05T21:40:36.071Z",
+    "artifactDirectoryName": "serverless/auth-server/dev/1625695056346-2021-07-07T21:57:36.346Z",
     "artifact": "auth-server.zip"
   }
 }

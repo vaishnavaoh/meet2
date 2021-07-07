@@ -81,7 +81,7 @@ export const getEvents = async () => {
   if (token) {
     removeQuery();
     const url =
-      "hhttps://qqi6od00ej.execute-api.us-east-1.amazonaws.com/dev/api/get-events" +
+      "https://qqi6od00ej.execute-api.us-east-1.amazonaws.com/dev/api/get-events" +
       "/" +
       token;
     const result = await axios.get(url);
@@ -108,7 +108,10 @@ export const getAccessToken = async () => {
         "https://qqi6od00ej.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
       );
       const { authUrl } = results.data;
-      return (window.location.href = authUrl);
+      console.log(authUrl)
+
+    //  return (window.location.href = authUrl);
+     window.location.href = authUrl;
     }
     return code && getToken(code);
   }
