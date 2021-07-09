@@ -15,15 +15,24 @@ functions:
       - http:
           path: api/get-auth-url
           method: get
+           headers: {
+            Access-Control-Allow-Origin: *
+        },
 getAccessToken:
     handler: handler.getAccessToken
     events:
       - http:
           path: api/token/{code}
           method: get
+           headers: {
+            Access-Control-Allow-Origin: *
+        },
 getCalendarEvents:
     handler: handler.getCalendarEvents
     events:
       - http:
           path: api/get-events/{accessToken}
           method: get
+           headers: {
+            Access-Control-Allow-Origin: *
+        },
